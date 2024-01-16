@@ -5,15 +5,8 @@ weatherio is a weather app made by codewithsadee
 
 #---------- HEADER ----------#
 
-alt = logo
 
-placeholder = Search city...
 
-<span class="m-icon">search</span>
-
-<span class="m-icon">arrow_back</span>
-
-London
 GB
 
 Current Location
