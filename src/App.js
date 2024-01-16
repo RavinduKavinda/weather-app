@@ -1,13 +1,11 @@
 import './App.css';
+import Layout from './layout/Layout';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-       adfsaf
-      </header>
-    </div>
-  );
+   <Layout/>
+  )
 }
 
-export default App;
+export default App
