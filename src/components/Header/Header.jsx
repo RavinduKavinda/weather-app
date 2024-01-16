@@ -9,7 +9,7 @@ const Header = () => {
           WEATHER.
         </h1>
 
-        <div className="search-view">
+        <div className="search-view active">
 
           <div className="search-wrapper">
             <input 
