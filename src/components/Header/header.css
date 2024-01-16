@@ -1,0 +1,27 @@
+.header .btn-primary .span {
+    display: none;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  .header .container,
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .container {
+    justify-content: space-between;
+  }
+  
+  .header-actions{
+    gap: 16px;
+  }
+  
+  .header .btn-primary{
+    padding-inline: 12px;
+  }
+
+  
