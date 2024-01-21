@@ -51,27 +51,14 @@ const Main = () => {
           </section>
 
           {/* Searching Place Weather Forecast*/}
-          <section className="section forecast" aria-label='forecast-label'>
+          <section className="section forecast" aria-labelledby='forecast-label'>
 
               <h2 className="title-2" id='forecast-label'>
                 5 Days Forecast
               </h2>
 
-              <card className="card-lg forecast-card">
+              <div className="card card-lg forecast-card">
                 <ul>
-                  <li className="card-item">
-                    <div className="icon-wrapper">
-                      <img src={forecast} alt="" className="weather-icon" />
-
-                      <span className="span">
-                        <p className="title-2">25</p>
-                      </span>
-                    </div>
-
-                    <p className="label-1">17 Feb</p>
-                    <p className="label-1">Friday</p>
-                  </li>
-
                   <li className="card-item">
                     <div className="icon-wrapper">
                       <img src={forecast} alt="" className="weather-icon" />
@@ -138,7 +125,7 @@ const Main = () => {
                   </li>
                   
                 </ul>
-              </card>
+              </div>
 
 
 
