@@ -102,3 +102,13 @@ article.container::before {
 .forecast-card .icon-wrapper {
     gap: 8px;
 }
+
+.forecast-card .label-1 {
+    color: var(--on-surface-variant);
+    font-weight: var(--weight-semiBold);
+}
+
+.forecast-card .card-item > .label-1 {
+    width: 100%;
+    text-align: right;
+}
