@@ -126,9 +126,6 @@ const Main = () => {
                   
                 </ul>
               </div>
-
-
-
           </section>
         </div>
 
