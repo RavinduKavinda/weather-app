@@ -277,6 +277,8 @@ const Main = () => {
           
         </div>
 
+        <div className="loading"></div>
+
       </article>
     </main>
   )
