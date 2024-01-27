@@ -12,7 +12,7 @@ const Error = () => {
             Page Not Found!
         </p>
 
-        <a href="" className='btn-primary'>
+        <a href="#" className='btn-primary'>
             <span className='span'>Go Home</span>
         </a>
     </section>

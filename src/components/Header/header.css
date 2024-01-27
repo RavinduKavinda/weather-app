@@ -121,7 +121,7 @@
     padding-inline: 16px 24px;
 }
 
-.search-view .view-item :is(.m-icon, .item-subtitle) {
+.search-view .view-item:is(.m-icon, .item-subtitle) {
     color: var(--on-surface-variant);
 }
 

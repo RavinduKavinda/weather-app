@@ -2,7 +2,7 @@ import React from 'react'
 import "./main.css";
 import icon from "./../../assets/images/weather_icons/01d.png";
 import forecast from "./../../assets/images/weather_icons/01n.png";
-import Footer from './../Footer/Footer';
+import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
   return (
