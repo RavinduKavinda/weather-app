@@ -10,7 +10,7 @@ const Footer = () => {
       </p>
 
       <p className="body-3">
-        Powered By <a href="https://openweathermap.org/api" target='_blank' rel='noopener'>
+        Powered By &nbsp; <a href="https://openweathermap.org/api" target='_blank' rel='noopener'>
           <img src={openWeather} alt="Open Weather" loading='lazy' />
         </a>
       </p>

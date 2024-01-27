@@ -272,9 +272,11 @@ const Main = () => {
               </div>
             </div>
           </section>
+
+          <Footer/>
+          
         </div>
 
-        <Footer/>
       </article>
     </main>
   )
