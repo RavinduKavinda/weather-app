@@ -31,7 +31,7 @@ const Main = () => {
 
               <ul className="meta-list">
                 <li className="meta-item">
-                  <span class="m-icon">calendar_today</span>
+                  <span className="m-icon">calendar_today</span>
 
                   <p className="title-3 meta-text">
                     Thursday 16, Feb
@@ -39,7 +39,7 @@ const Main = () => {
                 </li>
 
                 <li className="meta-item">
-                  <span class="m-icon">location_on</span>
+                  <span className="m-icon">location_on</span>
 
                   <p className="title-3 meta-text">
                     London, GB

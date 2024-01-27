@@ -24,7 +24,7 @@ const Header = () => {
             <button 
               className="icon-btn leading-icon has-state"
               aria-label='close search'> 
-                <span class="m-icon">arrow_back</span> 
+                <span className="m-icon">arrow_back</span> 
             </button>
 
           </div>
