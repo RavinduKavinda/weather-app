@@ -317,3 +317,35 @@ body {
   font-size: var(--label-2);
 }
 
+/* responsive for other platforms*/
+
+/* larger than 768px screen */
+@media (min-width: 768px) {
+  /* reusable styles */
+  .container {
+    padding: 20px;
+  }
+
+  .title-1{
+    --title-1:2.4rem;
+  }
+
+  .section > .title-2 {
+    margin-block-end: 16px;
+  }
+
+  .card-lg {
+    padding: 24px;
+  }
+
+  .card-sm {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+  }
+
+  .badge {
+    top: 20px;
+    right: 20px;
+  }
+} 
