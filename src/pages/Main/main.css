@@ -282,3 +282,35 @@ article.container::before {
     }
 
 }
+
+/* larger than 1200px screen */
+@media (min-width: 1200px) {
+    main{
+        height: calc(100vh - 120px);
+    }
+
+    article.container{
+        grid-template-columns: 360px minmax(0 1fr);
+        gap: 40px;
+    }
+
+    .current-weather .weather-icon{
+        width: 80px;
+    }
+
+    .forecast-card .title-2{
+        --title-2 : 2.2rem;
+    }
+
+    .highlight-card:nth-child(-n+2) {
+        height: 200px;
+    }
+
+    .highlight-card:nth-child(n+3) {
+        height: 150px;
+    }
+
+    .highlight-card .m-icon {
+        font-size: 5rem;
+    }
+}

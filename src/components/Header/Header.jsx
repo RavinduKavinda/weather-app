@@ -9,7 +9,7 @@ const Header = () => {
           WEATHER.
         </h1>
 
-        <div className="search-view">
+        <div className="search-view active">
 
           <div className="search-wrapper">
             <input 
@@ -19,7 +19,7 @@ const Header = () => {
               autoComplete='off'
               className='search-feild' />
 
-            <span className="m-icon">Search</span>
+            <span className="m-icon leading-icon">Search</span>
 
             <button 
               className="icon-btn leading-icon has-state"
