@@ -290,12 +290,13 @@ article.container::before {
     }
 
     article.container{
-        grid-template-columns: 360px minmax(0 1fr);
+        grid-template-columns: 360px minmax(0, 1fr);
         gap: 40px;
     }
 
     .current-weather .weather-icon{
         width: 80px;
+        height: 80px;
     }
 
     .forecast-card .title-2{
@@ -312,5 +313,12 @@ article.container::before {
 
     .highlight-card .m-icon {
         font-size: 5rem;
+    }
+}
+
+/* larger than 1400px screen */
+@media (min-width: 1400px) {
+    .highlight-list{
+        grid-template-columns: repeat(4, 1fr);
     }
 }
