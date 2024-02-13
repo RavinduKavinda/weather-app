@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import "./header.css";
 
 const Header = () => {
+
+  useEffect(() => {
+    import('./../../assets/js/app.js').then((script) => {
+      script.default(); 
+    });
+  }, []);
+
+  
   return (
     <header className="header">
       <div className="container">
@@ -9,7 +17,7 @@ const Header = () => {
           WEATHER.
         </h1>
 
-        <div className="search-view">
+        <div className="search-view" data-search-view>
 
           <div className="search-wrapper">
             <input 
@@ -23,7 +31,7 @@ const Header = () => {
 
             <button 
               className="icon-btn leading-icon has-state"
-              aria-label='close search'> 
+              aria-label='close search' data-search-toggler> 
                 <span className="m-icon">arrow_back</span> 
             </button>
 
@@ -46,7 +54,7 @@ const Header = () => {
                   </p>
                 </div>
 
-                <a href="#" className='item-link has-state'></a>
+                <a href="#" className='item-link has-state' data-search-toggler></a>
 
               </li>
             </ul>
@@ -59,7 +67,7 @@ const Header = () => {
         <div className="header-actions">
           <button 
             className="icon-btn hsa-state"
-            aria-label='open search'>
+            aria-label='open search' data-search-toggler>
               <span className="m-icon icon">
                 Search
               </span>
