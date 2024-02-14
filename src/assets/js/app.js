@@ -77,4 +77,31 @@ searchField.addEventListener("input", function(){
   }
 });
 
+/* render all weather data */
+const container = document.querySelector("[data-container]");
+const loading = document.querySelector("[data-loading]");
+const currentLocationBtn = document.querySelector("[data-c-location-btn]");
+const errorContent = document.querySelector("[data-error-content]");
+
+export const updateWeather = function(lat, lon){
+  loading.style.display = "grid";
+  container.style.overflowY = "hidden";
+  container.classList.contains("fade-in") ?? container.classList.remove("fade-in");
+  errorContent.style.display = "none";
+
+  const currentWeatherSection = document.querySelector("[data-current-weather]");
+  const highlightSection = document.querySelector("[data-highlights]");
+  const forecastSection = document.querySelector("[data-5days-forecast]");
+
+  currentWeatherSection.innerHTML = "";
+  highlightSection.innerHTML = "";
+  forecastSection.innerHTML = "";
+
+  if(window.location.hash === "#/current-location"){
+    currentLocationBtn.setAttribute("disabled", "");
+  } else {
+    currentLocationBtn.removeAttribute("disabled");
+  }
+}
+
 export default initializeScript;

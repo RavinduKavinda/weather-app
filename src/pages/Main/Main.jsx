@@ -7,10 +7,10 @@ import Footer from '../../components/Footer/Footer';
 const Main = () => {
   return (
     <main>
-      <article className="container">
+      <article className="container" data-container>
         <div className="content-left">
           {/* Searching Place Weather */}
-          <section className="section current-weather" aria-label='current weather'>
+          <section className="section current-weather" aria-label='current weather' data-current-weather>
 
             <div className="card card-lg current-weather-card">
               <h2 className="title-2 card-title">
@@ -52,7 +52,7 @@ const Main = () => {
           </section>
 
           {/* Searching Place Weather Forecast*/}
-          <section className="section forecast" aria-labelledby='forecast-label'>
+          <section className="section forecast" aria-labelledby='forecast-label' data-5days-forecast>
 
               <h2 className="title-2" id='forecast-label'>
                 5 Days Forecast
@@ -131,7 +131,7 @@ const Main = () => {
         </div>
 
         <div className="content-right">
-          <section className="section highlights" aria-labelledby='highlights-label'>
+          <section className="section highlights" aria-labelledby='highlights-label' data-highlights>
             <div className="card card-lg">
               <h2 className="title-2">Todays Highlights</h2>
 
@@ -277,7 +277,7 @@ const Main = () => {
           
         </div>
 
-        <div className="loading"></div>
+        <div className="loading" data-loading></div>
 
       </article>
     </main>

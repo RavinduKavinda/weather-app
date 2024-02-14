@@ -3,7 +3,7 @@ import './error.css'
 
 const Error = () => {
   return (
-    <section className="error-content">
+    <section className="error-content" data-error-content>
         <h2 className="heading">
             404
         </h2>
