@@ -25,7 +25,8 @@ const Header = () => {
               name='search'
               placeholder='Search city...'
               autoComplete='off'
-              className='search-feild' />
+              className='search-feild'
+              data-search-field />
 
             <span className="m-icon leading-icon">Search</span>
 
@@ -37,27 +38,8 @@ const Header = () => {
 
           </div>
 
-          <div className="search-result">
-            <ul className="view-list">
-              <li className="view-item">
-                <span className="m-icon">
-                  location_on
-                </span>
-
-                <div>
-                  <p className="item-title">
-                    London
-                  </p>
-
-                  <p className="label-2 item-subtitle">
-                  State of London, GB
-                  </p>
-                </div>
-
-                <a href="#" className='item-link has-state' data-search-toggler></a>
-
-              </li>
-            </ul>
+          <div className="search-result" data-search-result>
+            
           </div>
 
 
@@ -75,7 +57,7 @@ const Header = () => {
 
           <a 
             href="#/current-location" 
-            className='btn-primary has-state'>
+            className='btn-primary has-state' data-c-location-btn>
               <span className="m-icon">
                 my_location
               </span>
