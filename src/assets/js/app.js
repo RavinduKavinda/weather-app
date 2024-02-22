@@ -72,6 +72,11 @@ searchField.addEventListener("input", function(){
           searchResult.querySelector("[data-search-list]").appendChild(searchItem);
           items.push(searchItem.querySelector("[data-search-toggler]"));
         }
+
+        addEventOnElements(items, "click", function() {
+          toggleSearch();
+          searchResult.classList.remove("active");
+        })
       });
     }, searchTimeoutDuration);
   }
@@ -102,6 +107,68 @@ export const updateWeather = function(lat, lon){
   } else {
     currentLocationBtn.removeAttribute("disabled");
   }
+
+  /* current weather */
+  fetchData(URL.currentWeather(lat, lon), function (currentWeather){
+    const {
+      weather,
+      dt: dateUnix,
+      sys: {sunrise: sunriseUnixUTC, senset: sunsetUnixUTC},
+      main: {temp, stat, pressure, humidity},
+      visiblity,
+      timezone
+    } = currentWeather
+
+    const [{description, icon}] = weather;
+    const card = document.createElement("div");
+
+    card.classList.add("card", "card-lg", "current-weather-card");
+
+    card.innerHTML = `
+      <h2 className="title-2 card-title">
+        NOW
+      </h2>
+
+      <div className="weapper">
+        <p className="heading">
+          ${parseInt(temp)}&deg;<sup>c</sup>
+        </p>
+
+        <img src="./../../assets/images/weather_icons/${icon}.png" alt="" className="weather-icon" alt="${description}" />
+      </div>
+
+      <p className="body-3">
+        ${description}
+      </p>
+
+      <ul className="meta-list">
+        <li className="meta-item">
+          <span className="m-icon">calendar_today</span>
+
+          <p className="title-3 meta-text">
+            ${module.getDate(dateUnix, timezone)}
+          </p>
+        </li>
+
+        <li className="meta-item">
+          <span className="m-icon">location_on</span>
+
+          <p className="title-3 meta-text" data-location>
+            
+          </p>
+        </li>
+      </ul>
+    `;
+
+    fetchData(URL.reverseGeo(lat, lon), function([{name, country}]) {
+      card.querySelector("[data-location]").innerHTML = `${name}, ${country}
+      `
+    });
+    
+    currentWeatherSection.appendChild(card);
+  })
 }
 
-export default initializeScript;
+export const error404 = function (){
+
+}

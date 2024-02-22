@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import "./main.css";
 import icon from "./../../assets/images/weather_icons/01d.png";
 import forecast from "./../../assets/images/weather_icons/01n.png";
 import Footer from '../../components/Footer/Footer';
 
 const Main = () => {
+
+  useEffect(() => {
+    import('./../../assets/js/app.js').then((script) => {
+      script.default(); 
+    });
+  }, []);
+
   return (
     <main>
       <article className="container" data-container>
@@ -12,42 +19,7 @@ const Main = () => {
           {/* Searching Place Weather */}
           <section className="section current-weather" aria-label='current weather' data-current-weather>
 
-            <div className="card card-lg current-weather-card">
-              <h2 className="title-2 card-title">
-                NOW
-              </h2>
-
-              <div className="weapper">
-                <p className="heading">
-                  25&deg;<sup>c</sup>
-                </p>
-
-                <img src={icon} alt="" className="weather-icon" />
-              </div>
-
-              <p className="body-3">
-                Overcast Clouds
-              </p>
-
-              <ul className="meta-list">
-                <li className="meta-item">
-                  <span className="m-icon">calendar_today</span>
-
-                  <p className="title-3 meta-text">
-                    Thursday 16, Feb
-                  </p>
-                </li>
-
-                <li className="meta-item">
-                  <span className="m-icon">location_on</span>
-
-                  <p className="title-3 meta-text">
-                    London, GB
-                  </p>
-                </li>
-
-              </ul>
-            </div>
+            
 
           </section>
 
